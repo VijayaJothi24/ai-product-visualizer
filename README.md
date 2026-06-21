@@ -1,6 +1,7 @@
 <img width="1429" height="274" alt="kk" src="https://github.com/user-attachments/assets/c7d7fa05-8b79-4063-9ca3-88cbb686cc64" />
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+<img width="1204" height="889" alt="ai" src="https://github.com/user-attachments/assets/476e9c9d-0f39-4de4-92d9-0a450e1be4ef" />
+
 </div>
 
 ## Run Locally
