@@ -1,20 +1,55 @@
+<img width="1429" height="274" alt="kk" src="https://github.com/user-attachments/assets/c7d7fa05-8b79-4063-9ca3-88cbb686cc64" />
+
+<img width="593" height="544" alt="sA" src="https://github.com/user-attachments/assets/170e7dac-333b-4585-8a4f-8371bb0dcb75" />
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+<img width="1204" height="889" alt="ai" src="https://github.com/user-attachments/assets/476e9c9d-0f39-4de4-92d9-0a450e1be4ef" />
+
 </div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/2f2c7ff8-e55b-4d34-aa58-3680e07d2c95
-
-## Run Locally
-
-**Prerequisites:**  Node.js
+AI Product Visualizer
 
 
+A lightweight AI-powered product visualization app built with **Node.js**, **TypeScript**, and **Vite**.  
+This project integrates **Gemini AI** for intelligent product rendering and metadata generation.
+
+---
+
+
+ 🧩 Project Structure
+
+
+```
+ai-product-visualizer/
+├── .vscode/                 # Editor settings
+├── src/                     # Source code
+├── .env.example             # Environment variable template
+├── .gitignore               # Git ignore rules
+├── README.md                # Project documentation
+├── index.html               # Entry HTML file
+├── metadata.json            # Product metadata
+├── package-lock.json        # Dependency lock file
+├── package.json             # Project dependencies
+├── server.ts                # Backend server logic
+├── tsconfig.json            # TypeScript configuration
+└── vite.config.ts           # Vite build configuration
+
+
+
+
+🚀 Run and Deploy AI Studio App
+
+**Prerequisites**
+- Node.js (v18+)
+- Gemini API key
+
+**Setup Instructions**
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+GEMINI_API_KEY=<your_api_key_here>
+
+npm run dev
+
+
+
+
