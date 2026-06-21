@@ -1,0 +1,6 @@
+{
+  "name": "AI Product Visualizer",
+  "description": "Visualize product images on various marketing mediums like mugs, billboards, and t-shirts with AI consistency.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
