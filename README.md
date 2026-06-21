@@ -6,15 +6,50 @@
 <img width="1204" height="889" alt="ai" src="https://github.com/user-attachments/assets/476e9c9d-0f39-4de4-92d9-0a450e1be4ef" />
 
 </div>
-
-Run and deploy AI Studio app
-
-
-**Prerequisites:**  Node.js
+AI Product Visualizer
 
 
+A lightweight AI-powered product visualization app built with **Node.js**, **TypeScript**, and **Vite**.  
+This project integrates **Gemini AI** for intelligent product rendering and metadata generation.
+
+---
+
+
+ 🧩 Project Structure
+
+
+```
+ai-product-visualizer/
+├── .vscode/                 # Editor settings
+├── src/                     # Source code
+├── .env.example             # Environment variable template
+├── .gitignore               # Git ignore rules
+├── README.md                # Project documentation
+├── index.html               # Entry HTML file
+├── metadata.json            # Product metadata
+├── package-lock.json        # Dependency lock file
+├── package.json             # Project dependencies
+├── server.ts                # Backend server logic
+├── tsconfig.json            # TypeScript configuration
+└── vite.config.ts           # Vite build configuration
+
+
+
+
+🚀 Run and Deploy AI Studio App
+
+**Prerequisites**
+- Node.js (v18+)
+- Gemini API key
+
+**Setup Instructions**
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+GEMINI_API_KEY=<your_api_key_here>
+
+npm run dev
+
+
+
+
