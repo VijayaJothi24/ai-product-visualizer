@@ -6,6 +6,7 @@
 <img width="1204" height="889" alt="ai" src="https://github.com/user-attachments/assets/476e9c9d-0f39-4de4-92d9-0a450e1be4ef" />
 
 </div>
+
 AI Product Visualizer
 
 
