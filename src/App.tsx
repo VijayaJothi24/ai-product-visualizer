@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026 MyCompany LLC
+ * Copyright (c) 2026 Vijayarajan 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,25 +15,25 @@
  */
 
 import React, { useState, useRef, useEffect } from "react";
-import { 
-  Sparkles, 
-  Upload, 
-  RefreshCw, 
-  Check, 
-  Image as ImageIcon, 
-  Coffee, 
-  Tv, 
-  Shirt, 
-  ShoppingBag, 
-  Train, 
-  Smartphone, 
-  Tag, 
-  HelpCircle, 
-  AlertCircle, 
-  Eye, 
-  ChevronRight, 
-  Download, 
-  Layers, 
+import {
+  Sparkles,
+  Upload,
+  RefreshCw,
+  Check,
+  Image as ImageIcon,
+  Coffee,
+  Tv,
+  Shirt,
+  ShoppingBag,
+  Train,
+  Smartphone,
+  Tag,
+  HelpCircle,
+  AlertCircle,
+  Eye,
+  ChevronRight,
+  Download,
+  Layers,
   Play,
   Palette,
   CheckCircle2,
@@ -101,7 +101,7 @@ const SVG_PRESETS = [
           <path d="M50 63 C65 85, 95 118, 118 128" stroke="#ca8a04" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.4" />
           {/* Banana tip */}
           <path d="M172 105 C174 113, 175 110, 170 114 C167 116, 163 118, 161 113 Z" fill="#451a03" />
-          
+
           {/* Branding Badge Sticker */}
           <g transform="translate(85, 90) rotate(-15)">
             <rect x="-35" y="-14" width="70" height="28" rx="14" fill="#0284c7" stroke="white" strokeWidth="2" />
@@ -145,7 +145,7 @@ const SVG_PRESETS = [
           <path d="M66 80 Q100 100 134 75" stroke="#fef08a" strokeWidth="5" fill="none" opacity="0.8" />
           <path d="M66 100 Q100 120 134 95" stroke="#38bdf8" strokeWidth="6" fill="none" opacity="0.9" />
           <path d="M66 120 Q100 140 134 115" stroke="#ec4899" strokeWidth="4" fill="none" opacity="0.8" />
-          
+
           {/* Typography on product */}
           <text x="100" y="85" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" fontFamily="sans-serif" rotate="10">FIZZY</text>
           <text x="101" y="105" textAnchor="middle" fill="#fef08a" fontSize="10" letterSpacing="1.5" fontWeight="bold" fontFamily="monospace">COLA</text>
@@ -181,12 +181,12 @@ const SVG_PRESETS = [
           <rect x="70" y="32" width="60" height="18" rx="5" fill="url(#corkLid)" />
           {/* Jar Base */}
           <path d="M60 60 C55 60 48 70 48 95 C48 135 55 155 85 155 L115 155 C145 155 152 135 152 95 C152 70 145 60 140 60 Z" fill="url(#jarGlass)" filter="drop-shadow(0px 8px 24px rgba(217, 119, 6, 0.25))" />
-          
+
           {/* Hexagon honey patterns */}
           <polygon points="100,85 106,89 106,96 100,100 94,96 94,89" fill="none" stroke="#fffbeb" strokeWidth="2" opacity="0.6" />
           <polygon points="112,96 118,100 118,107 112,111 106,107 106,100" fill="none" stroke="#fffbeb" strokeWidth="1.5" opacity="0.4" />
           <polygon points="88,96 94,100 94,107 88,111 82,107 82,100" fill="none" stroke="#fffbeb" strokeWidth="1.5" opacity="0.4" />
-          
+
           {/* Label design */}
           <rect x="65" y="102" width="70" height="34" rx="4" fill="#fffbeb" stroke="#d97706" strokeWidth="1" />
           <text x="100" y="115" textAnchor="middle" fill="#78350f" fontSize="10" fontWeight="bold" fontFamily="serif">PURE HONEY</text>
@@ -200,7 +200,7 @@ const SVG_PRESETS = [
 export default function App() {
   const [activeTab, setActiveTab] = useState<"preset" | "ai" | "upload">("preset");
   const [selectedPresetId, setSelectedPresetId] = useState<string>("banana");
-  
+
   // Custom states
   const [customProductImage, setCustomProductImage] = useState<string | null>(null);
   const [aiProductPrompt, setAiProductPrompt] = useState<string>("");
@@ -372,7 +372,7 @@ export default function App() {
 
     try {
       const base64Img = await getActiveProductImageBase64();
-      
+
       const response = await fetch("/api/visualize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -418,7 +418,7 @@ export default function App() {
   const handleGenerateAllMediums = async () => {
     setVisualizeError(null);
     setIsGeneratingAll(true);
-    
+
     // Set all statuses to loading
     const initialStatuses: { [key: string]: "idle" | "loading" | "done" | "error" } = {};
     MARKING_MEDIUMS.forEach(m => {
@@ -489,7 +489,7 @@ export default function App() {
 
   return (
     <div id="root-visualizer" className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-amber-100 selection:text-amber-900 pb-20">
-      
+
       {/* Visual Header */}
       <header className="border-b border-slate-200 bg-white sticky top-0 z-40 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -505,7 +505,7 @@ export default function App() {
               <p className="text-xs text-slate-500">Maintain design consistency across various advertising channels with multi-modal generative mockups</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2 text-xs text-slate-500 bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-lg">
             <Layers className="w-3.5 h-3.5 text-slate-500" />
             <span>Powering brand mockups instantly</span>
@@ -515,12 +515,12 @@ export default function App() {
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
+
         {/* Left Column: Product Selection / Creation Space (Grid Span 5) */}
         <section className="lg:col-span-5 flex flex-col gap-6">
           <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-amber-400"></div>
-            
+
             <div className="flex items-center justify-between mb-4">
               <h2 className="font-bold text-lg text-slate-900 flex items-center gap-2">
                 1. Product Original Setup
@@ -530,21 +530,21 @@ export default function App() {
 
             {/* Mode Selectors */}
             <div className="grid grid-cols-3 gap-2 bg-slate-100 p-1 rounded-2xl mb-6 text-xs font-semibold">
-              <button 
+              <button
                 id="tab-preset"
                 onClick={() => { setActiveTab("preset"); setProductError(null); }}
                 className={`py-2 px-3 rounded-xl transition duration-150 ${activeTab === "preset" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"}`}
               >
                 Graphics Preset
               </button>
-              <button 
+              <button
                 id="tab-ai"
                 onClick={() => { setActiveTab("ai"); setProductError(null); }}
                 className={`py-2 px-3 rounded-xl transition duration-150 ${activeTab === "ai" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"}`}
               >
                 Generate Product
               </button>
-              <button 
+              <button
                 id="tab-upload"
                 onClick={() => { setActiveTab("upload"); setProductError(null); }}
                 className={`py-2 px-3 rounded-xl transition duration-150 ${activeTab === "upload" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"}`}
@@ -582,7 +582,7 @@ export default function App() {
                     </button>
                   ))}
                 </div>
-                
+
                 {/* Embedded Hidden container rendering current selected SVG, allowing canvas serialization */}
                 <div className="sr-only">
                   {SVG_PRESETS.map((p) => (
@@ -637,7 +637,7 @@ export default function App() {
                 <p className="text-xs text-slate-500">
                   Upload a clean, bright photo of your unique product (ideally with high contrast and light backdrops):
                 </p>
-                <div 
+                <div
                   onDragOver={(e) => e.preventDefault()}
                   onDrop={handleDrop}
                   onClick={() => fileInputRef.current?.click()}
@@ -668,9 +668,9 @@ export default function App() {
                     {SVG_PRESETS.find(p => p.id === selectedPresetId)?.iconCode}
                   </div>
                 ) : customProductImage ? (
-                  <img 
-                    src={customProductImage} 
-                    alt="Active target product" 
+                  <img
+                    src={customProductImage}
+                    alt="Active target product"
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
                     id="target-product-preview-img"
@@ -688,7 +688,7 @@ export default function App() {
                   <span>{activeTab === "preset" ? "Vector Preset" : activeTab === "ai" ? "AI Generated" : "User Uploaded"}</span>
                 </div>
               </div>
-              
+
               {customProductImage && (activeTab === "upload" || activeTab === "ai") && (
                 <button
                   id="btn-remove-source"
@@ -701,7 +701,7 @@ export default function App() {
               )}
             </div>
           </div>
-          
+
           {/* Preset Visual consistency help block */}
           <div className="bg-amber-50/50 border border-amber-100 rounded-3xl p-5 flex gap-3 text-xs text-slate-700">
             <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
@@ -717,7 +717,7 @@ export default function App() {
         {/* Right Column: Medium Selection and Visualization Controls (Grid Span 7) */}
         <section className="lg:col-span-7 flex flex-col gap-6">
           <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-            
+
             <div className="flex items-center justify-between mb-4">
               <h2 className="font-bold text-lg text-slate-900 flex items-center gap-2">
                 2. AI Placement Mediums &amp; Settings
@@ -855,10 +855,9 @@ export default function App() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {MARKING_MEDIUMS.map(m => (
                     <div key={m.id} className="flex items-center gap-2 bg-white px-2.5 py-1.5 rounded-xl border border-slate-100 text-[10px]">
-                      <div className={`w-2 h-2 rounded-full ${
-                        parallelStatuses[m.id] === "done" ? "bg-emerald-500" :
+                      <div className={`w-2 h-2 rounded-full ${parallelStatuses[m.id] === "done" ? "bg-emerald-500" :
                         parallelStatuses[m.id] === "error" ? "bg-red-400" : "bg-amber-400 animate-ping"
-                      }`} />
+                        }`} />
                       <span className="font-medium text-slate-605 truncate">{m.name.split(" ")[0]}</span>
                     </div>
                   ))}
@@ -879,7 +878,7 @@ export default function App() {
               </h2>
               <p className="text-xs text-slate-500">Compare layout consistency across active frames and mediums as we render them with consistency</p>
             </div>
-            
+
             {campaignMockups.length > 0 && (
               <button
                 id="btn-clear-campaign"
@@ -894,7 +893,7 @@ export default function App() {
 
           <AnimatePresence mode="popLayout">
             {campaignMockups.length === 0 ? (
-              <motion.div 
+              <motion.div
                 key="empty-state"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -912,7 +911,7 @@ export default function App() {
                 </div>
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 key="workspace-grid"
                 className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
                 layout
@@ -926,8 +925,8 @@ export default function App() {
                     >
                       {/* Generative Mockup Image Container */}
                       <div className="relative aspect-square bg-slate-50 overflow-hidden cursor-zoom-in" onClick={() => setFullscreenMockup(mock)}>
-                        <img 
-                          src={mock.imageBytes} 
+                        <img
+                          src={mock.imageBytes}
                           alt={mock.mediumLabel}
                           className="w-full h-full object-cover group-hover:scale-[1.02] transition duration-300"
                           referrerPolicy="no-referrer"
@@ -935,7 +934,7 @@ export default function App() {
                         <div className="absolute top-2.5 left-2.5 bg-slate-900/85 backdrop-blur-sm px-2.5 py-1 rounded-md text-[9px] font-mono text-white tracking-wider font-extrabold uppercase uppercase">
                           {mock.medium}
                         </div>
-                        
+
                         <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition duration-150 flex items-center justify-center">
                           <div className="bg-white/90 backdrop-blur-sm p-3 rounded-full text-slate-800 shadow-md">
                             <Eye className="w-5 h-5" />
@@ -950,7 +949,7 @@ export default function App() {
                             <span className="text-[11px] font-black text-slate-900 line-clamp-1">{mock.mediumLabel}</span>
                             <span className="text-[9px] font-mono text-slate-400 bg-slate-100 px-2.5 py-0.5 rounded-full uppercase shrink-0">{mock.style}</span>
                           </div>
-                          
+
                           {mock.promptUsed && (
                             <p className="text-[10px] text-slate-500 leading-normal line-clamp-2 italic mb-1">
                               &ldquo;{mock.promptUsed}&rdquo;
@@ -993,21 +992,21 @@ export default function App() {
       {/* Fullscreen Insight Modal */}
       <AnimatePresence>
         {fullscreenMockup && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
             onClick={() => setFullscreenMockup(null)}
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
               onClick={(e) => e.stopPropagation()}
               className="bg-white rounded-3xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row shadow-2xl relative"
             >
-              <button 
+              <button
                 id="btn-close-modal"
                 onClick={() => setFullscreenMockup(null)}
                 className="absolute top-4 right-4 bg-slate-900/60 hover:bg-slate-900 text-white p-2 rounded-full transition duration-150 z-10 cursor-pointer"
@@ -1019,9 +1018,9 @@ export default function App() {
 
               {/* Left Side picture display */}
               <div className="md:w-1/2 bg-slate-900 flex items-center justify-center relative aspect-square">
-                <img 
-                  src={fullscreenMockup.imageBytes} 
-                  alt={fullscreenMockup.mediumLabel} 
+                <img
+                  src={fullscreenMockup.imageBytes}
+                  alt={fullscreenMockup.mediumLabel}
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
@@ -1035,7 +1034,7 @@ export default function App() {
                     <span>Conformed Representation</span>
                   </div>
                   <h3 className="text-xl font-black text-slate-900 mt-2 mb-1.5 leading-tight">{fullscreenMockup.mediumLabel}</h3>
-                  
+
                   <div className="flex gap-1.5 mb-5 flex-wrap">
                     <span className="text-[10px] font-mono bg-slate-100 border border-slate-200 text-slate-700 px-2.5 py-1 rounded-full uppercase font-bold">{fullscreenMockup.medium}</span>
                     <span className="text-[10px] font-mono bg-slate-100 border border-slate-200 text-slate-700 px-2.5 py-1 rounded-full uppercase font-bold">{fullscreenMockup.style} style</span>
